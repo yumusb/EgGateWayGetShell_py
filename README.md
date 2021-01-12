@@ -12,8 +12,8 @@ python3 eg.py urls.txt
 
 ### 目标
 
-title:锐捷网络-EWEB网管系统
-port:4430
+title:锐捷网络-EWEB网管系统  
+~~port:4430~~
 
 ### 漏洞成因
 
@@ -36,3 +36,8 @@ port:4430
 ?>
 ```
 
+### 漏洞修复
+
+替换本项目目录下的 guestIsUp.php 到 /tmp/html/guest_auth/guestIsUp.php。亦或者直接执行以下脚本
+
+`wget -O /tmp/html/guest_auth/guestIsUp.php https://cdn.jsdelivr.net/gh/yumusb/EgGateWayGetShell_py/guestIsUp.php`
